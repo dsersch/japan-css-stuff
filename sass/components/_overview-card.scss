@@ -1,0 +1,57 @@
+.overview-card {
+    width: 33.33333%;
+    height: 25rem;
+    margin-right: -4px;
+    display: inline-block;
+    padding: 5rem;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    position: relative;
+    transition: all .3s;
+
+    &__heading {
+        font-size: 6rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .3s;
+    }
+
+    &__image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        filter: brightness(50%);
+
+        &--1 {
+            background-image: url("../img/golden-shrine-back.jpg");
+        }
+
+        &--2 {
+            background-image: url("../img/osaka-castle-far.jpg");
+        }
+
+        &--3 {
+            background-image: url("../img/lanterns.jpg");
+        }
+    }
+
+    &:hover &__heading {
+        opacity: 0;
+        top: 0;
+    }
+
+    &:hover &__image {
+        filter: brightness(100%)
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+}
